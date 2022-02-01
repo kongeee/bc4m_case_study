@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -49,7 +48,21 @@ namespace BCFM.Controllers {
             var request = WebRequest.Create(url);
             request.Method = "GET";
 
-            using var webResponse = request.GetResponse();
+
+            WebResponse webResponse;
+
+            try {
+                webResponse = request.GetResponse();
+            }
+            catch {
+                Dictionary<string, string> dict = new Dictionary<string, string>();
+                dict.Add("message", "Internal Server Error");
+
+                return BadRequest(dict);
+
+            }
+            
+           
             using var webStream = webResponse.GetResponseStream();
 
             using var reader = new StreamReader(webStream);
@@ -57,9 +70,9 @@ namespace BCFM.Controllers {
             dynamic innerData = JObject.Parse(data);
             int temperature = innerData.current.temp_c;
             City city1 = new City { CityName = city.ToLower(), Temperature = temperature };
-            
+
             return Ok(city1);
-        }
+            }
     }
 
     class City {
