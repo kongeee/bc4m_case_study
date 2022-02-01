@@ -8,4 +8,4 @@ docker build -t bc4m/casestudy:v1.2 .
 docker run -p 5000:80 bc4m/casestudy:v1.2
 ```
 
-It can be accessed [localhost:5000]{http://localhost:5000}
+It can be accessed [localhost:5000](http://localhost:5000)
