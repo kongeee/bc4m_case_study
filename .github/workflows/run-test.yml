@@ -1,0 +1,20 @@
+name: TEST
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag bc4m/casestudy:v1.2
+    - name: Test
+      run: dotnet vstest ./Test/bin/Debug/netcoreapp3.1/Test.dll
