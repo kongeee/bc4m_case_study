@@ -31,7 +31,6 @@ C:\Users\furka\Desktop\GitRepos\BCFM\BCFM\bin\Debug\netcoreapp3.1\BCFM.dll
 C:\Users\furka\Desktop\GitRepos\BCFM\BCFM\bin\Debug\netcoreapp3.1\BCFM.pdb
 C:\Users\furka\Desktop\GitRepos\BCFM\BCFM\bin\Debug\netcoreapp3.1\Json.Net.dll
 C:\Users\furka\Desktop\GitRepos\BCFM\BCFM\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Users\furka\Desktop\GitRepos\BCFM\BCFM\obj\Debug\netcoreapp3.1\BCFM.csproj.AssemblyReference.cache
 C:\Users\furka\Desktop\GitRepos\BCFM\BCFM\obj\Debug\netcoreapp3.1\BCFM.AssemblyInfoInputs.cache
 C:\Users\furka\Desktop\GitRepos\BCFM\BCFM\obj\Debug\netcoreapp3.1\BCFM.AssemblyInfo.cs
 C:\Users\furka\Desktop\GitRepos\BCFM\BCFM\obj\Debug\netcoreapp3.1\BCFM.csproj.CoreCompileInputs.cache
@@ -44,3 +43,4 @@ C:\Users\furka\Desktop\GitRepos\BCFM\BCFM\obj\Debug\netcoreapp3.1\BCFM.csproj.Co
 C:\Users\furka\Desktop\GitRepos\BCFM\BCFM\obj\Debug\netcoreapp3.1\BCFM.dll
 C:\Users\furka\Desktop\GitRepos\BCFM\BCFM\obj\Debug\netcoreapp3.1\BCFM.pdb
 C:\Users\furka\Desktop\GitRepos\BCFM\BCFM\obj\Debug\netcoreapp3.1\BCFM.genruntimeconfig.cache
+C:\Users\furka\Desktop\GitRepos\BCFM\BCFM\obj\Debug\netcoreapp3.1\BCFM.csproj.AssemblyReference.cache

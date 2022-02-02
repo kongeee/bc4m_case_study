@@ -21,6 +21,10 @@ namespace BCFM.Controllers {
             _configuration = configuration;
         }
 
+        public BCFMController() {
+
+        }
+
         [HttpGet("")]
         public IActionResult GetName() {
             Person person1 = new Person { Name = "Furkan", Surname = "Ekici" };
