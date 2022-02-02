@@ -11,18 +11,13 @@ using Newtonsoft.Json.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.Extensions.Configuration;
 
+
 namespace BCFM.Controllers {
     [Route("")]
     [ApiController]
     public class BCFMController : ControllerBase {
 
-        private IConfiguration _configuration;
-        public BCFMController(IConfiguration configuration) {
-            _configuration = configuration;
-        }
-
-      
-
+       
         [HttpGet("")]
         public IActionResult GetName() {
             Person person1 = new Person { Name = "Furkan", Surname = "Ekici" };
@@ -44,8 +39,8 @@ namespace BCFM.Controllers {
 
         [HttpGet("temperature")]
         public IActionResult GetTemperature(string city) {
-           
-            var apiKey = _configuration.GetSection("APIKey").Value;
+
+            var apiKey = "46a9e632933c491aa5f205016223001";
             var url = "http://api.weatherapi.com/v1/current.json?q=" + city + "&key=" + apiKey;
             var request = WebRequest.Create(url);
             request.Method = "GET";
