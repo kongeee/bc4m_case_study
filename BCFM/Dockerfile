@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN dotnet restore "./BCFM/BCFM.csproj"
+RUN dotnet restore
 
 RUN dotnet publish BCFM.csproj -c Release -o /app
 
