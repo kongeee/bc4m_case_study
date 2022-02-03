@@ -22,7 +22,7 @@ jobs:
       with:
         dotnet-version: 3.1
     - name: Build with .Net
-      run: dotnet build --configuration Release
+      run: dotnet build ./BCFM/BCFM.csproj
       
     - name: Build the Docker image
       run: docker build . --file ./BCFM/Dockerfile --tag bc4m/casestudy:v1.2
