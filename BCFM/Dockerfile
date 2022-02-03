@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN dotnet restore C:\app\BCFM\BCFM\obj\BCFM.csproj.nuget.g.props
+RUN dotnet restore "./BCFM/BCFN.csproj"
 
 RUN dotnet publish BCFM.csproj -c Release -o /app
 
