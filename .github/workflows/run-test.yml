@@ -10,10 +10,20 @@ jobs:
 
   build:
 
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
     - uses: actions/checkout@v2
+    - name: Setup .Net Core
+      uses: action/setup-dotnet@v2
+      with:
+        dotnet-version: 3.1
+    - name: Build with .Net
+      run: dotnet build --configuration Release
+      
     - name: Build the Docker image
       run: docker build . --file ./BCFM/Dockerfile --tag bc4m/casestudy:v1.2
     - name: Test
