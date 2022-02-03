@@ -10,7 +10,7 @@ RUN dotnet restore
 
 COPY . .
 
-RUN dotnet publish ./BCFM/*.csproj -o /publish/
+RUN dotnet publish ./BCFM/*.csproj -o ./publish
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 WORKDIR /app
