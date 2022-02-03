@@ -10,7 +10,8 @@ RUN dotnet restore
 
 COPY . .
 
-RUN dotnet publish ./BCFM/BCFM.csproj -o /publish/
+FROM sdkimage AS publish
+RUN dotnet publish -c Release -o /publish
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 WORKDIR /app
